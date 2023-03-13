@@ -1,5 +1,6 @@
-package baronvice.springstuff.musicplayer;
+package baronvice.springstuff.musicplayer.utilities;
 
+import baronvice.springstuff.musicplayer.utilities.interfaces.IMusic;
 import lombok.Getter;
 import lombok.Setter;
 

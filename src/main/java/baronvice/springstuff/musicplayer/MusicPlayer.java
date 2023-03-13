@@ -1,41 +1,66 @@
 package baronvice.springstuff.musicplayer;
 
-import lombok.SneakyThrows;
+import baronvice.springstuff.musicplayer.utilities.Song;
+import baronvice.springstuff.musicplayer.utilities.interfaces.IMusicPlayer;
+import baronvice.springstuff.musicplayer.utilities.music.Music;
 
-/** Concept is: while song is played print lyrics line every second. Probably should do it with threads.
- * When I want it to pause .await() more likely */
 
 public class MusicPlayer implements IMusicPlayer {
     private Music music;
     private Song currentSong;
-    private Thread thread;
+    private Thread player;
     public MusicPlayer(Music music){
         this.music = music;
     }
 
     @Override
-    public void playSong(String name) {
-        currentSong = music.getSong(name);
-        if (currentSong == null){
-            System.out.println("No match");
+    public void pickSong(String name) {
+        Song nextSong = music.getSong(name);
+        if (nextSong == null)
             return;
+
+        resetSong();
+        System.out.println(String.format("New song selected. %s - %s",
+                currentSong.getPerformer(), currentSong.getName()));
+        player = new Thread(this::playSong);
+    }
+
+    @Override
+    public void startPlay() {
+        player.start();
+    }
+
+    @Override
+    public void playSong() {
+        currentSong.getLyrics().lines().forEach(this::printLine);
+    }
+
+    private void printLine(String line){
+        System.out.println(line);
+        try {
+            this.wait(1000);
+        } catch (InterruptedException ignored) {
+
         }
-
-        thread = new Thread(this::startSong);
     }
 
-    public void startSong(){
-
-    }
-
-    @SneakyThrows
-    @Override
-    public void pauseSong() {
-        thread.wait();
+    private void resetSong() {
+        player.interrupt();
     }
 
     @Override
-    public void continueSong(){
-        thread.notifyAll();
+    public void pausePlay() {
+        try {
+            System.out.println("Paused.");
+            player.wait();
+        } catch (InterruptedException ignored) {
+
+        }
+    }
+
+    @Override
+    public void continuePlay() {
+        System.out.println("Continued.");
+        player.notify();
     }
 }

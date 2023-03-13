@@ -2,7 +2,7 @@
 
 Music Player -> Music <- Rock Music, Classic Music, ... <- Song
 
-Music Player: pickMusic(Music music), play(String songName), pause()
+Music Player: pickMusic(Music music), play(String songName), pause(), continue()
 Music: songCollection, addSongToCollection(String name, Song song), removeSongFromCollection(String name),
 name(?? why not getClass() or reflection maybe, is it really needed ??)
 Song: String name, String performer, String lyrics, Music genre, toString()
