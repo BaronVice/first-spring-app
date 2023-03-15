@@ -14,12 +14,10 @@ public class TestSpring {
 
         // That's how we can take bean (first arg - bean id, second arg - class name)
         Music music = context.getBean("musicBean", Music.class);
-
         MusicPlayer musicPlayer = new MusicPlayer(music);
 
         music.addSongToCollection(new Song("Big Bobby", "Bobby",
                 "Well that Bob\nIs a big Boy\nThe end", music));
-
         musicPlayer.pickSong("Big Bobby");
         musicPlayer.startPlay();
 
@@ -28,8 +26,10 @@ public class TestSpring {
         musicPlayer.pausePlay();
 
         Thread.sleep(2500);
+        musicPlayer.pickSong("Big Bobby");
+        musicPlayer.startPlay();
 
-        musicPlayer.continuePlay();
+//        musicPlayer.continuePlay();
 
         // After you've finished with application context it should be closed
         context.close();

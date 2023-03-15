@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9525f883-a183-45bf-8e46-af2af2772afa" name="Changes" comment="structure plan to build it">
-      <change afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/interfaces/IMusic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/interfaces/IMusicPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/BluesMusic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/Music.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/RockMusic.java" afterDir="false" />
+    <list default="true" id="9525f883-a183-45bf-8e46-af2af2772afa" name="Changes" comment="Next time I have to find the way to handle all of this stuff from context">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/TestSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/TestSpring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/IMusic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/IMusicPlayer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/Music.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/MusicPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/RockMusic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/structure" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/structure" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +100,9 @@
       <workItem from="1678420767584" duration="1425000" />
       <workItem from="1678672935227" duration="887000" />
       <workItem from="1678676522492" duration="1636000" />
-      <workItem from="1678703310231" duration="5616000" />
+      <workItem from="1678703310231" duration="5733000" />
+      <workItem from="1678793702590" duration="7367000" />
+      <workItem from="1678861074274" duration="1999000" />
     </task>
     <task id="LOCAL-00001" summary="Maybe I should use abstract class instead of interface">
       <created>1678370669277</created>
@@ -134,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678678190074</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Next time I have to find the way to handle all of this stuff from context">
+      <created>1678712965018</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678712965018</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +142,7 @@
     <MESSAGE value="Maybe I should use abstract class instead of interface" />
     <MESSAGE value="Too complicated, but I'll do it" />
     <MESSAGE value="structure plan to build it" />
-    <option name="LAST_COMMIT_MESSAGE" value="structure plan to build it" />
+    <MESSAGE value="Next time I have to find the way to handle all of this stuff from context" />
+    <option name="LAST_COMMIT_MESSAGE" value="Next time I have to find the way to handle all of this stuff from context" />
   </component>
 </project>

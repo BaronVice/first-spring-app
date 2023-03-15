@@ -4,11 +4,16 @@ import baronvice.springstuff.musicplayer.utilities.Song;
 import baronvice.springstuff.musicplayer.utilities.interfaces.IMusicPlayer;
 import baronvice.springstuff.musicplayer.utilities.music.Music;
 
+import java.io.BufferedReader;
+import java.io.StringReader;
+
 
 public class MusicPlayer implements IMusicPlayer {
     private Music music;
     private Song currentSong;
     private Thread player;
+    private volatile boolean isPaused;
+
     public MusicPlayer(Music music){
         this.music = music;
     }
@@ -19,10 +24,16 @@ public class MusicPlayer implements IMusicPlayer {
         if (nextSong == null)
             return;
 
-        resetSong();
-        System.out.println(String.format("New song selected. %s - %s",
-                currentSong.getPerformer(), currentSong.getName()));
+        if (player != null){
+            resetSong();
+        }
+
+        currentSong = nextSong;
+        System.out.printf("New song selected. %s - %s%n",
+                currentSong.getPerformer(), currentSong.getName());
+
         player = new Thread(this::playSong);
+
     }
 
     @Override
@@ -32,35 +43,45 @@ public class MusicPlayer implements IMusicPlayer {
 
     @Override
     public void playSong() {
-        currentSong.getLyrics().lines().forEach(this::printLine);
+        BufferedReader bufferedReader = new BufferedReader(new StringReader(currentSong.getLyrics()));
+        for (String line : bufferedReader.lines().toList()){
+            try {
+                printLine(line);
+            }
+            catch (InterruptedException e){
+                return;
+            }
+        }
+
     }
 
-    private void printLine(String line){
-        System.out.println(line);
-        try {
-            this.wait(1000);
-        } catch (InterruptedException ignored) {
+    private void printLine(String line) throws InterruptedException {
 
+        while (isPaused) {
+            Thread.onSpinWait();
         }
+
+        if (player.isInterrupted())
+            throw new InterruptedException();
+
+        System.out.println(line);
+        Thread.sleep(1000);
     }
 
     private void resetSong() {
         player.interrupt();
+        isPaused = false;
     }
 
     @Override
     public void pausePlay() {
-        try {
-            System.out.println("Paused.");
-            player.wait();
-        } catch (InterruptedException ignored) {
-
-        }
+        System.out.println("Paused.");
+        isPaused = true;
     }
 
     @Override
     public void continuePlay() {
         System.out.println("Continued.");
-        player.notify();
+        isPaused = false;
     }
 }

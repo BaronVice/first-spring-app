@@ -7,10 +7,6 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="musicPlayerBean"
-          class="baronvice.springstuff.musicplayer.MusicPlayer">
-    </bean>
-
     <bean id="musicBean"
           class="baronvice.springstuff.musicplayer.utilities.music.RockMusic">
     </bean>
