@@ -2,16 +2,17 @@ package baronvice.springstuff.musicplayer.utilities.music;
 
 import baronvice.springstuff.musicplayer.utilities.Song;
 import baronvice.springstuff.musicplayer.utilities.interfaces.IMusic;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.util.HashMap;
+import java.util.Map;
 
+@NoArgsConstructor
+@AllArgsConstructor
 public abstract class Music implements IMusic {
 
-    protected HashMap<String, Song> songsCollection;
-
-    public Music(){
-        songsCollection = new HashMap<>();
-    }
+    protected Map<String, Song> songsCollection = new HashMap<>();
 
     @Override
     public Song getSong(String name) {

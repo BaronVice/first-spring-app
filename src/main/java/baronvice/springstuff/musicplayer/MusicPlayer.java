@@ -3,8 +3,7 @@ package baronvice.springstuff.musicplayer;
 import baronvice.springstuff.musicplayer.utilities.Song;
 import baronvice.springstuff.musicplayer.utilities.interfaces.IMusicPlayer;
 import baronvice.springstuff.musicplayer.utilities.music.Music;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.io.BufferedReader;
 import java.io.StringReader;
@@ -12,15 +11,13 @@ import java.io.StringReader;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@RequiredArgsConstructor
 public class MusicPlayer implements IMusicPlayer {
-    private Music music;
+    @NonNull private Music music;
     private Song currentSong;
     private Thread player;
     private volatile boolean isPaused;
-
-    public MusicPlayer(Music music){
-        this.music = music;
-    }
 
     @Override
     public void pickSong(String name) {
@@ -32,7 +29,7 @@ public class MusicPlayer implements IMusicPlayer {
             resetSong();
 
         currentSong = nextSong;
-        System.out.printf("New song selected. %s - %s%n",
+        System.out.printf("--- New song selected. %s - %s ---%n",
                 currentSong.getPerformer(), currentSong.getName());
 
         player = new Thread(this::playSong);
@@ -41,6 +38,7 @@ public class MusicPlayer implements IMusicPlayer {
 
     @Override
     public void startPlay() {
+        System.out.println("--- Play ---");
         player.start();
     }
 
@@ -78,13 +76,13 @@ public class MusicPlayer implements IMusicPlayer {
 
     @Override
     public void pausePlay() {
-        System.out.println("Paused.");
+        System.out.println("--- Pause ---");
         isPaused = true;
     }
 
     @Override
     public void continuePlay() {
-        System.out.println("Continued.");
+        System.out.println("--- Continue ---");
         isPaused = false;
     }
 }

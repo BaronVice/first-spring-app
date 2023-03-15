@@ -7,42 +7,61 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="songs.properties"/>
+
+
     <bean id="paradiseCityBean"
           class="baronvice.springstuff.musicplayer.utilities.Song">
-        <constructor-arg index="0" value="Paradise City"/>
-        <constructor-arg index="1" value="Guns N' Roses"/>
-        <constructor-arg index="2" value=
-        "Take me down to the paradise city
-        %nWhere the grass is green and the girls are pretty
-        %nOh, won't you please take me homeTake me down to the paradise city
-        %nWhere the grass is green and the girls are pretty
-        %nTake me home"/>
+        <constructor-arg index="0" value="${paradiseCity.name}"/>
+        <constructor-arg index="1" value="${paradiseCity.performer}"/>
+        <constructor-arg index="2" value="${paradiseCity.lyrics}"/>
+    </bean>
+
+    <bean id="mySacrifice"
+          class="baronvice.springstuff.musicplayer.utilities.Song">
+        <constructor-arg index="0" value="${mySacrifice.name}"/>
+        <constructor-arg index="1" value="${mySacrifice.performer}"/>
+        <constructor-arg index="2" value="${mySacrifice.lyrics}"/>
     </bean>
 
     <bean id="dontStopBelievinBean"
           class="baronvice.springstuff.musicplayer.utilities.Song">
-        <constructor-arg index="0" value="Don't Stop Believin"/>
-        <constructor-arg index="1" value="Journey"/>
-        <constructor-arg index="2" value=
-        "Strangers waitin'
-        %nUp and down the boulevard
-        %nTheir shadows searchin' in the night
-        %nStreetlights, people
-        %nLivin' just to find emotion
-        %nHidin' somewhere in the night"/>
+        <constructor-arg index="0" value="${dontStopBelievin.name}"/>
+        <constructor-arg index="1" value="${dontStopBelievin.performer}"/>
+        <constructor-arg index="2" value="${dontStopBelievin.lyrics}"/>
     </bean>
+
 
     <bean id="rockMusicBean"
           class="baronvice.springstuff.musicplayer.utilities.music.RockMusic">
+        <constructor-arg>
+            <map key-type="java.lang.String" value-type="baronvice.springstuff.musicplayer.utilities.Song">
+                <entry key="Paradise City" value-ref="paradiseCityBean"/>
+                <entry key="My Sacrifice" value-ref="mySacrifice"/>
+            </map>
+        </constructor-arg>
     </bean>
 
     <bean id="bluesMusicBean"
           class="baronvice.springstuff.musicplayer.utilities.music.BluesMusic">
+        <constructor-arg>
+            <map key-type="java.lang.String" value-type="baronvice.springstuff.musicplayer.utilities.Song">
+                <entry key="Don't Stop Believin" value-ref="dontStopBelievinBean"/>
+            </map>
+        </constructor-arg>
     </bean>
 
+
     <bean id="musicPlayerBean"
-          class="baronvice.springstuff.musicplayer.MusicPlayer">
+          class="baronvice.springstuff.musicplayer.MusicPlayer"
+          scope="prototype">
         <constructor-arg ref="rockMusicBean"/>
+    </bean>
+
+    <bean id="musicPlayerSetterBean"
+          class="baronvice.springstuff.musicplayer.MusicPlayer"
+          scope="prototype">
+        <property name="music" ref="bluesMusicBean"/>
     </bean>
 
 </beans>

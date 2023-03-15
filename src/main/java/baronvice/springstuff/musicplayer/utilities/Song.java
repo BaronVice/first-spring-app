@@ -1,20 +1,16 @@
 package baronvice.springstuff.musicplayer.utilities;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@AllArgsConstructor
 public class Song {
     private String name;
     private String performer;
     private String lyrics;
-
-    public Song (String name, String performer, String lyrics) {
-        this.name = name;
-        this.performer = performer;
-        this.lyrics = lyrics;
-    }
 
     @Override
     public String toString() {
