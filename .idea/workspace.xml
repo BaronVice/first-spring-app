@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9525f883-a183-45bf-8e46-af2af2772afa" name="Changes" comment="Next time I have to find the way to handle all of this stuff from context">
+    <list default="true" id="9525f883-a183-45bf-8e46-af2af2772afa" name="Changes" comment="I hate this complicated bullsh17 so much, but it works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/TestSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/TestSpring.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/MusicPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/Song.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +103,7 @@
       <workItem from="1678676522492" duration="1636000" />
       <workItem from="1678703310231" duration="5733000" />
       <workItem from="1678793702590" duration="7367000" />
-      <workItem from="1678861074274" duration="1999000" />
+      <workItem from="1678861074274" duration="6283000" />
     </task>
     <task id="LOCAL-00001" summary="Maybe I should use abstract class instead of interface">
       <created>1678370669277</created>
@@ -132,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678712965018</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="I hate this complicated bullsh17 so much, but it works">
+      <created>1678864172286</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678864172286</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +151,7 @@
     <MESSAGE value="Too complicated, but I'll do it" />
     <MESSAGE value="structure plan to build it" />
     <MESSAGE value="Next time I have to find the way to handle all of this stuff from context" />
-    <option name="LAST_COMMIT_MESSAGE" value="Next time I have to find the way to handle all of this stuff from context" />
+    <MESSAGE value="I hate this complicated bullsh17 so much, but it works" />
+    <option name="LAST_COMMIT_MESSAGE" value="I hate this complicated bullsh17 so much, but it works" />
   </component>
 </project>

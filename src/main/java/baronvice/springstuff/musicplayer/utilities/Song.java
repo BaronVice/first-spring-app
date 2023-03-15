@@ -1,6 +1,5 @@
 package baronvice.springstuff.musicplayer.utilities;
 
-import baronvice.springstuff.musicplayer.utilities.interfaces.IMusic;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,13 +9,11 @@ public class Song {
     private String name;
     private String performer;
     private String lyrics;
-    private IMusic genre;
 
-    public Song (String name, String performer, String lyrics, IMusic genre) {
+    public Song (String name, String performer, String lyrics) {
         this.name = name;
         this.performer = performer;
         this.lyrics = lyrics;
-        this.genre = genre;
     }
 
     @Override
@@ -25,7 +22,6 @@ public class Song {
                 """
                         Name: %s
                         Performer: %s
-                        Genre: %s
-                """, name, performer, genre);
+                """, name, performer);
     }
 }

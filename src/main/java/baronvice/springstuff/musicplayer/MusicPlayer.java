@@ -3,11 +3,15 @@ package baronvice.springstuff.musicplayer;
 import baronvice.springstuff.musicplayer.utilities.Song;
 import baronvice.springstuff.musicplayer.utilities.interfaces.IMusicPlayer;
 import baronvice.springstuff.musicplayer.utilities.music.Music;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.BufferedReader;
 import java.io.StringReader;
 
 
+@Getter
+@Setter
 public class MusicPlayer implements IMusicPlayer {
     private Music music;
     private Song currentSong;
@@ -24,9 +28,8 @@ public class MusicPlayer implements IMusicPlayer {
         if (nextSong == null)
             return;
 
-        if (player != null){
+        if (player != null)
             resetSong();
-        }
 
         currentSong = nextSong;
         System.out.printf("New song selected. %s - %s%n",
@@ -43,7 +46,7 @@ public class MusicPlayer implements IMusicPlayer {
 
     @Override
     public void playSong() {
-        BufferedReader bufferedReader = new BufferedReader(new StringReader(currentSong.getLyrics()));
+        BufferedReader bufferedReader = new BufferedReader(new StringReader(String.format(currentSong.getLyrics())));
         for (String line : bufferedReader.lines().toList()){
             try {
                 printLine(line);
