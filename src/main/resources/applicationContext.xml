@@ -7,67 +7,68 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+
+    <context:component-scan base-package="baronvice.springstuff.musicplayer"/>
     <context:property-placeholder location="songs.properties"/>
 
 
-    <bean id="paradiseCityBean"
-          class="baronvice.springstuff.musicplayer.utilities.Song">
-        <constructor-arg index="0" value="${paradiseCity.name}"/>
-        <constructor-arg index="1" value="${paradiseCity.performer}"/>
-        <constructor-arg index="2" value="${paradiseCity.lyrics}"/>
-    </bean>
+<!--    <bean id="paradiseCityBean"-->
+<!--          class="baronvice.springstuff.musicplayer.utilities.Song">-->
+<!--        <constructor-arg index="0" value="${paradiseCity.name}"/>-->
+<!--        <constructor-arg index="1" value="${paradiseCity.performer}"/>-->
+<!--        <constructor-arg index="2" value="${paradiseCity.lyrics}"/>-->
+<!--    </bean>-->
 
-    <bean id="mySacrifice"
-          class="baronvice.springstuff.musicplayer.utilities.Song">
-        <constructor-arg index="0" value="${mySacrifice.name}"/>
-        <constructor-arg index="1" value="${mySacrifice.performer}"/>
-        <constructor-arg index="2" value="${mySacrifice.lyrics}"/>
-    </bean>
+<!--    <bean id="mySacrifice"-->
+<!--          class="baronvice.springstuff.musicplayer.utilities.Song">-->
+<!--        <constructor-arg index="0" value="${mySacrifice.name}"/>-->
+<!--        <constructor-arg index="1" value="${mySacrifice.performer}"/>-->
+<!--        <constructor-arg index="2" value="${mySacrifice.lyrics}"/>-->
+<!--    </bean>-->
 
-    <bean id="dontStopBelievinBean"
-          class="baronvice.springstuff.musicplayer.utilities.Song">
-        <constructor-arg index="0" value="${dontStopBelievin.name}"/>
-        <constructor-arg index="1" value="${dontStopBelievin.performer}"/>
-        <constructor-arg index="2" value="${dontStopBelievin.lyrics}"/>
-    </bean>
-
-
-    <bean id="rockMusicBean"
-          class="baronvice.springstuff.musicplayer.utilities.music.RockMusic">
-        <constructor-arg>
-            <map key-type="java.lang.String" value-type="baronvice.springstuff.musicplayer.utilities.Song">
-                <entry key="Paradise City" value-ref="paradiseCityBean"/>
-                <entry key="My Sacrifice" value-ref="mySacrifice"/>
-            </map>
-        </constructor-arg>
-    </bean>
-
-    <bean id="bluesMusicBean"
-          class="baronvice.springstuff.musicplayer.utilities.music.BluesMusic">
-        <constructor-arg>
-            <map key-type="java.lang.String" value-type="baronvice.springstuff.musicplayer.utilities.Song">
-                <entry key="Don't Stop Believin" value-ref="dontStopBelievinBean"/>
-            </map>
-        </constructor-arg>
-    </bean>
+<!--    <bean id="dontStopBelievinBean"-->
+<!--          class="baronvice.springstuff.musicplayer.utilities.Song">-->
+<!--        <constructor-arg index="0" value="${dontStopBelievin.name}"/>-->
+<!--        <constructor-arg index="1" value="${dontStopBelievin.performer}"/>-->
+<!--        <constructor-arg index="2" value="${dontStopBelievin.lyrics}"/>-->
+<!--    </bean>-->
 
 
-    <bean id="musicPlayerBean"
-          class="baronvice.springstuff.musicplayer.MusicPlayer"
-          scope="prototype"
-          init-method="sendStartMessage"
-          destroy-method="sendEndMessage"
-          factory-method="getMusicPlayer">
-        <constructor-arg ref="rockMusicBean"/>
-    </bean>
+<!--    <bean id="rockMusicBean"-->
+<!--          class="baronvice.springstuff.musicplayer.utilities.music.RockMusic">-->
+<!--        <constructor-arg>-->
+<!--            <map key-type="java.lang.String" value-type="baronvice.springstuff.musicplayer.utilities.Song">-->
+<!--                <entry key="Paradise City" value-ref="paradiseCityBean"/>-->
+<!--                <entry key="My Sacrifice" value-ref="mySacrifice"/>-->
+<!--            </map>-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
 
-    <bean id="musicPlayerSetterBean"
-          class="baronvice.springstuff.musicplayer.MusicPlayer"
-          scope="prototype"
-          init-method="sendStartMessage"
-          destroy-method="sendEndMessage"
-          factory-method="getMusicPlayer">
-        <property name="music" ref="bluesMusicBean"/>
-    </bean>
+<!--    <bean id="bluesMusicBean"-->
+<!--          class="baronvice.springstuff.musicplayer.utilities.music.BluesMusic">-->
+<!--        <constructor-arg>-->
+<!--            <map key-type="java.lang.String" value-type="baronvice.springstuff.musicplayer.utilities.Song">-->
+<!--                <entry key="Don't Stop Believin" value-ref="dontStopBelievinBean"/>-->
+<!--            </map>-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="musicPlayerBean"-->
+<!--          class="baronvice.springstuff.musicplayer.MusicPlayer"-->
+<!--          scope="prototype"-->
+<!--          init-method="sendStartMessage"-->
+<!--          destroy-method="sendEndMessage">-->
+<!--        <constructor-arg ref="rockMusicBean"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="musicPlayerSetterBean"-->
+<!--          class="baronvice.springstuff.musicplayer.MusicPlayer"-->
+<!--          scope="prototype"-->
+<!--          init-method="sendStartMessage"-->
+<!--          destroy-method="sendEndMessage"-->
+<!--          factory-method="getMusicPlayer">-->
+<!--        <property name="music" ref="bluesMusicBean"/>-->
+<!--    </bean>-->
 
 </beans>

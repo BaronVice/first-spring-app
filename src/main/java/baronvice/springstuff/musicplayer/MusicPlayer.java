@@ -4,28 +4,32 @@ import baronvice.springstuff.musicplayer.utilities.Song;
 import baronvice.springstuff.musicplayer.utilities.interfaces.IMusicPlayer;
 import baronvice.springstuff.musicplayer.utilities.music.Music;
 import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.StringReader;
 
 
+@Component
 @Getter
 @Setter
-@NoArgsConstructor (access = AccessLevel.PRIVATE)
-@RequiredArgsConstructor (access = AccessLevel.PRIVATE)
+@RequiredArgsConstructor (onConstructor = @__(@Autowired))
 public class MusicPlayer implements IMusicPlayer {
-    @NonNull private Music music;
+    @Qualifier("rockMusic")
+    private final Music music;
     private Song currentSong;
     private Thread player;
     private volatile boolean isPaused;
 
-    public static MusicPlayer getMusicPlayer(){
-        return new MusicPlayer();
-    }
-
-    public static MusicPlayer getMusicPlayer(Music music){
-        return new MusicPlayer(music);
-    }
+//    public static MusicPlayer getMusicPlayer(){
+//        return new MusicPlayer();
+//    }
+//
+//    public static MusicPlayer getMusicPlayer(Music music){
+//        return new MusicPlayer(music);
+//    }
 
     @Override
     public void pickSong(String name) {
