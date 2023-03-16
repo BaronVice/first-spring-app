@@ -54,13 +54,19 @@
 
     <bean id="musicPlayerBean"
           class="baronvice.springstuff.musicplayer.MusicPlayer"
-          scope="prototype">
+          scope="prototype"
+          init-method="sendStartMessage"
+          destroy-method="sendEndMessage"
+          factory-method="getMusicPlayer">
         <constructor-arg ref="rockMusicBean"/>
     </bean>
 
     <bean id="musicPlayerSetterBean"
           class="baronvice.springstuff.musicplayer.MusicPlayer"
-          scope="prototype">
+          scope="prototype"
+          init-method="sendStartMessage"
+          destroy-method="sendEndMessage"
+          factory-method="getMusicPlayer">
         <property name="music" ref="bluesMusicBean"/>
     </bean>
 

@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9525f883-a183-45bf-8e46-af2af2772afa" name="Changes" comment="Cool stuff with context. Still searching for solution to use it for methods as well.">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/songs.properties" afterDir="false" />
+    <list default="true" id="9525f883-a183-45bf-8e46-af2af2772afa" name="Changes" comment="Context use external properties, constructor takes collection, player is prototype. Less code thanks to lombok. Less manual, more automized thanks to context">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/TestSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/TestSpring.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/MusicPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/BluesMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/BluesMusic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/Music.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/RockMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/RockMusic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +104,9 @@
       <workItem from="1678793702590" duration="7367000" />
       <workItem from="1678861074274" duration="15416000" />
       <workItem from="1678879577570" duration="3856000" />
-      <workItem from="1678884309154" duration="6256000" />
+      <workItem from="1678884309154" duration="6374000" />
+      <workItem from="1678928779917" duration="198000" />
+      <workItem from="1678950238547" duration="3910000" />
     </task>
     <task id="LOCAL-00001" summary="Maybe I should use abstract class instead of interface">
       <created>1678370669277</created>
@@ -153,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678868418111</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Context use external properties, constructor takes collection, player is prototype. Less code thanks to lombok. Less manual, more automized thanks to context">
+      <created>1678891707711</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678891707711</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +170,7 @@
     <MESSAGE value="Next time I have to find the way to handle all of this stuff from context" />
     <MESSAGE value="I hate this complicated bullsh17 so much, but it works" />
     <MESSAGE value="Cool stuff with context. Still searching for solution to use it for methods as well." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cool stuff with context. Still searching for solution to use it for methods as well." />
+    <MESSAGE value="Context use external properties, constructor takes collection, player is prototype. Less code thanks to lombok. Less manual, more automized thanks to context" />
+    <option name="LAST_COMMIT_MESSAGE" value="Context use external properties, constructor takes collection, player is prototype. Less code thanks to lombok. Less manual, more automized thanks to context" />
   </component>
 </project>

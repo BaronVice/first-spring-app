@@ -11,13 +11,21 @@ import java.io.StringReader;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@RequiredArgsConstructor
+@NoArgsConstructor (access = AccessLevel.PRIVATE)
+@RequiredArgsConstructor (access = AccessLevel.PRIVATE)
 public class MusicPlayer implements IMusicPlayer {
     @NonNull private Music music;
     private Song currentSong;
     private Thread player;
     private volatile boolean isPaused;
+
+    public static MusicPlayer getMusicPlayer(){
+        return new MusicPlayer();
+    }
+
+    public static MusicPlayer getMusicPlayer(Music music){
+        return new MusicPlayer(music);
+    }
 
     @Override
     public void pickSong(String name) {
@@ -84,5 +92,13 @@ public class MusicPlayer implements IMusicPlayer {
     public void continuePlay() {
         System.out.println("--- Continue ---");
         isPaused = false;
+    }
+
+    private void sendStartMessage(){
+        System.out.println("*Weird machine sounds*");
+    }
+
+    private void sendEndMessage(){
+        System.out.println("See you next time, bye!");
     }
 }
