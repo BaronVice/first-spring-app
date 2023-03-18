@@ -5,14 +5,14 @@ import baronvice.springstuff.musicplayer.utilities.interfaces.IMusic;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 @NoArgsConstructor
 @AllArgsConstructor
 public abstract class Music implements IMusic {
 
-    protected Map<String, Song> songsCollection = new HashMap<>();
+    protected Map<String, Song> songsCollection = new TreeMap<>();
 
     @Override
     public Song getSong(String name) {

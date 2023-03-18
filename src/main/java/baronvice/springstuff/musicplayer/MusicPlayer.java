@@ -3,33 +3,35 @@ package baronvice.springstuff.musicplayer;
 import baronvice.springstuff.musicplayer.utilities.Song;
 import baronvice.springstuff.musicplayer.utilities.interfaces.IMusicPlayer;
 import baronvice.springstuff.musicplayer.utilities.music.Music;
-import lombok.*;
+import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
 import java.io.StringReader;
 
 
 @Component
-@Getter
-@Setter
-@RequiredArgsConstructor (onConstructor = @__(@Autowired))
+@Scope("prototype")
 public class MusicPlayer implements IMusicPlayer {
     @Qualifier("rockMusic")
-    private final Music music;
+    @NonNull private Music music;
     private Song currentSong;
     private Thread player;
     private volatile boolean isPaused;
 
-//    public static MusicPlayer getMusicPlayer(){
-//        return new MusicPlayer();
-//    }
-//
-//    public static MusicPlayer getMusicPlayer(Music music){
-//        return new MusicPlayer(music);
-//    }
+    @Autowired
+    public MusicPlayer(@Qualifier("rockMusic") @NonNull Music music) {
+        this.music = music;
+    }
+
+    @PostConstruct
+    private void sendStartMessage(){
+        System.out.println("*Weird machine sounds*");
+    }
 
     @Override
     public void pickSong(String name) {
@@ -98,11 +100,36 @@ public class MusicPlayer implements IMusicPlayer {
         isPaused = false;
     }
 
-    private void sendStartMessage(){
-        System.out.println("*Weird machine sounds*");
+    @Qualifier("rockMusic")
+    public @NonNull Music getMusic() {
+        return this.music;
     }
 
-    private void sendEndMessage(){
-        System.out.println("See you next time, bye!");
+    public Song getCurrentSong() {
+        return this.currentSong;
+    }
+
+    public Thread getPlayer() {
+        return this.player;
+    }
+
+    public boolean isPaused() {
+        return this.isPaused;
+    }
+
+    public void setMusic(@Qualifier("rockMusic") @NonNull Music music) {
+        this.music = music;
+    }
+
+    public void setCurrentSong(Song currentSong) {
+        this.currentSong = currentSong;
+    }
+
+    public void setPlayer(Thread player) {
+        this.player = player;
+    }
+
+    public void setPaused(boolean isPaused) {
+        this.isPaused = isPaused;
     }
 }

@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9525f883-a183-45bf-8e46-af2af2772afa" name="Changes" comment="Init, destroy and factory methods inside some beans">
+    <list default="true" id="9525f883-a183-45bf-8e46-af2af2772afa" name="Changes" comment="Checkpoint (from XML to annotations)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/SpringConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lombok.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/TestSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/TestSpring.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/MusicPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/Song.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/BluesMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/BluesMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/Music.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/RockMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/RockMusic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +31,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -57,12 +63,14 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Lombok Config",
-    "spring.configuration.checksum": "fcb6a07497c0aeef1148c00424c4b56e",
+    "spring.configuration.checksum": "bcbd1739e13ded2fd679f5019d5d3eb4",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BaronVice\IdeaProjects\first-spring-app\src\main\resources" />
+      <recent name="C:\Users\BaronVice\IdeaProjects\first-spring-app\src\main\resources\baronvice\springstuff" />
       <recent name="C:\Users\BaronVice\IdeaProjects\first-spring-app\src\main\java\baronvice\springstuff\musicplayer\utilities" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -75,7 +83,7 @@
       <module name="first-spring-app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="baronvice.springstuff.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,7 +120,11 @@
       <workItem from="1678884309154" duration="6374000" />
       <workItem from="1678928779917" duration="198000" />
       <workItem from="1678950238547" duration="11086000" />
-      <workItem from="1678966917544" duration="1248000" />
+      <workItem from="1678966917544" duration="1313000" />
+      <workItem from="1679018819823" duration="1151000" />
+      <workItem from="1679054050631" duration="1770000" />
+      <workItem from="1679128805334" duration="5616000" />
+      <workItem from="1679138411391" duration="5577000" />
     </task>
     <task id="LOCAL-00001" summary="Maybe I should use abstract class instead of interface">
       <created>1678370669277</created>
@@ -170,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678957198938</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Checkpoint (from XML to annotations)">
+      <created>1678977886959</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678977886959</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +204,7 @@
     <MESSAGE value="Cool stuff with context. Still searching for solution to use it for methods as well." />
     <MESSAGE value="Context use external properties, constructor takes collection, player is prototype. Less code thanks to lombok. Less manual, more automized thanks to context" />
     <MESSAGE value="Init, destroy and factory methods inside some beans" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init, destroy and factory methods inside some beans" />
+    <MESSAGE value="Checkpoint (from XML to annotations)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checkpoint (from XML to annotations)" />
   </component>
 </project>
