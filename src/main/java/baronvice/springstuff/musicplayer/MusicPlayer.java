@@ -5,6 +5,7 @@ import baronvice.springstuff.musicplayer.utilities.interfaces.IMusicPlayer;
 import baronvice.springstuff.musicplayer.utilities.music.Music;
 import lombok.Getter;
 import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -14,23 +15,23 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
 import java.io.StringReader;
+import java.util.Map;
 
 
 @Component
 @Scope("prototype")
 @Getter
 @Setter
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class MusicPlayer implements IMusicPlayer {
-    @Qualifier("rockMusic")
-    @NonNull private Music music;
+
+    @NonNull
+    @Qualifier("musicGenres")
+    private Map<String, Music> genres;
+    private Music currentGenre;
     private Song currentSong;
     private Thread player;
     private volatile boolean isPaused;
-
-    @Autowired
-    public MusicPlayer(@Qualifier("rockMusic") @NonNull Music music) {
-        this.music = music;
-    }
 
     @PostConstruct
     private void sendStartMessage(){
@@ -38,8 +39,20 @@ public class MusicPlayer implements IMusicPlayer {
     }
 
     @Override
-    public void pickSong(String name) {
-        Song nextSong = music.getSong(name);
+    public void pickGenre(String genreName){
+        Music nextGenre = genres.get(genreName);
+        if (nextGenre == null)
+            return;
+
+        currentGenre = nextGenre;
+    }
+
+    @Override
+    public void pickSong(String songName) {
+        if (currentGenre == null)
+            return;
+
+        Song nextSong = currentGenre.getSong(songName);
         if (nextSong == null)
             return;
 
@@ -56,6 +69,14 @@ public class MusicPlayer implements IMusicPlayer {
 
     @Override
     public void startPlay() {
+        if (currentGenre == null){
+            System.out.println("Pick genre first and song after");
+            return;
+        }
+        if (currentSong == null){
+            System.out.println("Pick song first");
+        }
+
         System.out.println("--- Play ---");
         player.start();
     }

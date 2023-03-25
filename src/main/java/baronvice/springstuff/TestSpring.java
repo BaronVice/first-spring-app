@@ -14,6 +14,7 @@ public class TestSpring {
 
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 
+        musicPlayer.pickGenre("Rock");
         musicPlayer.pickSong("Paradise City");
         musicPlayer.startPlay();
 
@@ -24,7 +25,8 @@ public class TestSpring {
 
         Thread.sleep(1000);
 
-        musicPlayer.pickSong("My Sacrifice");
+        musicPlayer.pickGenre("Blues");
+        musicPlayer.pickSong("Don't Stop Believin");
         musicPlayer.startPlay();
 
         context.close();
