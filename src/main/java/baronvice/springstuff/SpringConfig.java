@@ -17,27 +17,27 @@ public class SpringConfig {
     @Bean
     public Song paradiseCity() {
         return new Song(
-                environment.getProperty("paradiseCity.name"),
-                environment.getProperty("paradiseCity.performer"),
-                environment.getProperty("paradiseCity.lyrics")
+                environment.getProperty("paradise-city.name"),
+                environment.getProperty("paradise-city.performer"),
+                environment.getProperty("paradise-city.lyrics")
         );
     }
 
     @Bean
     public Song mySacrifice() {
         return new Song(
-                environment.getProperty("mySacrifice.name"),
-                environment.getProperty("mySacrifice.performer"),
-                environment.getProperty("mySacrifice.lyrics")
+                environment.getProperty("my-sacrifice.name"),
+                environment.getProperty("my-sacrifice.performer"),
+                environment.getProperty("my-sacrifice.lyrics")
         );
     }
 
     @Bean
     public Song dontStopBelievin() {
         return new Song(
-                environment.getProperty("dontStopBelievin.name"),
-                environment.getProperty("dontStopBelievin.performer"),
-                environment.getProperty("dontStopBelievin.lyrics")
+                environment.getProperty("dont-stop-believin.name"),
+                environment.getProperty("dont-stop-believin.performer"),
+                environment.getProperty("dont-stop-believin.lyrics")
         );
     }
 

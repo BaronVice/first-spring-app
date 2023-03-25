@@ -3,7 +3,9 @@ package baronvice.springstuff.musicplayer;
 import baronvice.springstuff.musicplayer.utilities.Song;
 import baronvice.springstuff.musicplayer.utilities.interfaces.IMusicPlayer;
 import baronvice.springstuff.musicplayer.utilities.music.Music;
+import lombok.Getter;
 import lombok.NonNull;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
@@ -16,6 +18,8 @@ import java.io.StringReader;
 
 @Component
 @Scope("prototype")
+@Getter
+@Setter
 public class MusicPlayer implements IMusicPlayer {
     @Qualifier("rockMusic")
     @NonNull private Music music;
@@ -98,38 +102,5 @@ public class MusicPlayer implements IMusicPlayer {
     public void continuePlay() {
         System.out.println("--- Continue ---");
         isPaused = false;
-    }
-
-    @Qualifier("rockMusic")
-    public @NonNull Music getMusic() {
-        return this.music;
-    }
-
-    public Song getCurrentSong() {
-        return this.currentSong;
-    }
-
-    public Thread getPlayer() {
-        return this.player;
-    }
-
-    public boolean isPaused() {
-        return this.isPaused;
-    }
-
-    public void setMusic(@Qualifier("rockMusic") @NonNull Music music) {
-        this.music = music;
-    }
-
-    public void setCurrentSong(Song currentSong) {
-        this.currentSong = currentSong;
-    }
-
-    public void setPlayer(Thread player) {
-        this.player = player;
-    }
-
-    public void setPaused(boolean isPaused) {
-        this.isPaused = isPaused;
     }
 }

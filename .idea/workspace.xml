@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9525f883-a183-45bf-8e46-af2af2772afa" name="Changes" comment="Checkpoint (4h on looking for how to take args from properties)">
+    <list default="true" id="9525f883-a183-45bf-8e46-af2af2772afa" name="Changes" comment="Checkpoint (now it works as it should)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/SpringConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/TestSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/TestSpring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/MusicPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/BluesMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/BluesMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/RockMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/RockMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/songs.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/songs.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +24,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -61,7 +65,7 @@
     "project.structure.side.proportion": "0.0",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Lombok Config",
-    "spring.configuration.checksum": "ae8805d5a569ab34cf986d1cf800ef5c",
+    "spring.configuration.checksum": "bcbd1739e13ded2fd679f5019d5d3eb4",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -128,7 +132,8 @@
       <workItem from="1679459852789" duration="2296000" />
       <workItem from="1679572824373" duration="6000" />
       <workItem from="1679574580349" duration="655000" />
-      <workItem from="1679732705322" duration="1028000" />
+      <workItem from="1679732705322" duration="3596000" />
+      <workItem from="1679736373938" duration="2708000" />
     </task>
     <task id="LOCAL-00001" summary="Maybe I should use abstract class instead of interface">
       <created>1678370669277</created>
@@ -200,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679148560446</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Checkpoint (now it works as it should)">
+      <created>1679733765391</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1679733765391</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +229,7 @@
     <MESSAGE value="Init, destroy and factory methods inside some beans" />
     <MESSAGE value="Checkpoint (from XML to annotations)" />
     <MESSAGE value="Checkpoint (4h on looking for how to take args from properties)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Checkpoint (4h on looking for how to take args from properties)" />
+    <MESSAGE value="Checkpoint (now it works as it should)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checkpoint (now it works as it should)" />
   </component>
 </project>
