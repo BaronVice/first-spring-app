@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9525f883-a183-45bf-8e46-af2af2772afa" name="Changes" comment="Trying @ConfigurationProperties">
+    <list default="true" id="9525f883-a183-45bf-8e46-af2af2772afa" name="Changes" comment="Enough with annotations for now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/SpringConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/TestSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/TestSpring.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/MusicPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/interfaces/IMusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/interfaces/IMusicPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/BluesMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/BluesMusic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/RockMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baronvice/springstuff/musicplayer/utilities/music/RockMusic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/songs.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/songs.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +131,7 @@
       <workItem from="1679732705322" duration="3596000" />
       <workItem from="1679736373938" duration="4457000" />
       <workItem from="1679743736021" duration="1123000" />
-      <workItem from="1679753538829" duration="2309000" />
+      <workItem from="1679753538829" duration="3397000" />
     </task>
     <task id="LOCAL-00001" summary="Maybe I should use abstract class instead of interface">
       <created>1678370669277</created>
@@ -222,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679740254493</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Enough with annotations for now">
+      <created>1679756171022</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1679756171022</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +254,7 @@
     <MESSAGE value="Checkpoint (4h on looking for how to take args from properties)" />
     <MESSAGE value="Checkpoint (now it works as it should)" />
     <MESSAGE value="Trying @ConfigurationProperties" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying @ConfigurationProperties" />
+    <MESSAGE value="Enough with annotations for now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enough with annotations for now" />
   </component>
 </project>

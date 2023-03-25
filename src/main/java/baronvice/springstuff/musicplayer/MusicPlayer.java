@@ -8,9 +8,6 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
@@ -18,15 +15,12 @@ import java.io.StringReader;
 import java.util.Map;
 
 
-@Component
-@Scope("prototype")
 @Getter
 @Setter
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class MusicPlayer implements IMusicPlayer {
 
     @NonNull
-    @Qualifier("musicGenres")
     private Map<String, Music> genres;
     private Music currentGenre;
     private Song currentSong;

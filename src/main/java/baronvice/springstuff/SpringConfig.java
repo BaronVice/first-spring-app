@@ -1,5 +1,6 @@
 package baronvice.springstuff;
 
+import baronvice.springstuff.musicplayer.MusicPlayer;
 import baronvice.springstuff.musicplayer.utilities.Song;
 import baronvice.springstuff.musicplayer.utilities.music.BluesMusic;
 import baronvice.springstuff.musicplayer.utilities.music.Music;
@@ -75,5 +76,10 @@ public class SpringConfig {
                 Map.entry("Rock", rockMusic()),
                 Map.entry("Blues", bluesMusic())
         );
+    }
+
+    @Bean
+    public MusicPlayer musicPlayer(){
+        return new MusicPlayer(musicGenres());
     }
 }
