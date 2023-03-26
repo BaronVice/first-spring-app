@@ -15,8 +15,13 @@ import java.util.Map;
 @ComponentScan("baronvice.springstuff.musicplayer")
 @PropertySource("classpath:songs.properties")
 public class SpringConfig {
+
+    private final Environment environment;
+
     @Autowired
-    Environment environment;
+    public SpringConfig(Environment environment){
+        this.environment = environment;
+    }
 
     @Bean
     public Song paradiseCity() {
